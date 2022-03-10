@@ -106,7 +106,8 @@ class Node(Tree):
     def this_tree(self):
         ## very careful: sym=False! do not symbolize again
 ##      return Tree(self.label, self.span, wrd=self.word, sym=False)
-        t = DepTree(int(self.label))
+        # t = DepTree(int(self.label))
+        t = DepTree(self.span[0])
         t.canonical = True
         return t
 
